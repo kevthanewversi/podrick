@@ -10,6 +10,7 @@ from dateutil.parser import parse
 #remember to test for run times in the code of say having the dates data come from a file or from a dict
 
 #check if sendmail/postfix is installed
+#should be run once a month and store all the birthdays for that month
 
 mydict = {"apples": "Jan 17 2018", "oranges": "July 10"}
 messages = ["On your special day, I wish you good luck. I hope this wonderful day will fill up your heart with joy and blessings. Have a fantastic birthday, celebrate the happiness on every day of your life. Happy Birthday!!","Happy Birth","Love","Mamama"]
