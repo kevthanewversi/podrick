@@ -16,7 +16,7 @@ from distutils import spawn
 class Podrick:
 
     birthday_dates = {"apples": "Jan 17 2018", "oranges": "July 10"}
-    messages = ["Test","Test","Test","Test"]
+    messages = ["Test", "Test", "Test", "Test"]
     date_re = re.compile('^(0?[1-9]|[12]\d|3[01])-(0?[1-9]|1[0-2])-([12]\d{3})$')
 
     #use cases to chcek for certain months and check for certain days that match with guys' birthdays
@@ -26,7 +26,7 @@ class Podrick:
     birthday_dates = []
 
     '''
-    Checks if either sendmail/postfix are installed
+     Method that checks if either sendmail/postfix are installed
     '''
     def email_client_check():
         raven1 = spawn.find_executable("sendmail")
@@ -50,6 +50,7 @@ class Podrick:
             # reg expression to check if date is in required format
             # ValueError: time data '' does not match format '%b %d %Y'
             # remove this if data is coming from a CSV
+            # birthrday_dates here is a list not a dict  so change my validate method call to use the DictReader object
             if type(row[name]) != str | type(row[date]) != str:
                 print(row[name]+"'s birthday isn't a valid date")
                 self.errors += self.errors
