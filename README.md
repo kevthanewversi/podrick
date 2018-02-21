@@ -1,2 +1,2 @@
 # podrick
-Helping out Brienne of Tarth
+Brienne of Tarth's squire
